@@ -24,11 +24,11 @@ class ItemModal {
                 children: <Widget>[
                   TextField(
                     controller: nameController,
-                    decoration: const InputDecoration(labelText: 'Name'),
+                    decoration: const InputDecoration(labelText: 'Nome'),
                   ),
                   TextField(
                     controller: priceController,
-                    decoration: const InputDecoration(labelText: 'Price'),
+                    decoration: const InputDecoration(labelText: 'Preço'),
                     keyboardType: TextInputType.number,
                   ),
                   const SizedBox(height: 20),
@@ -47,13 +47,13 @@ class ItemModal {
                       }
                       Navigator.pop(context);
                     },
-                    child: const Text('Save'),
+                    child: const Text('Salvar'),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: const Text('Close'),
+                    child: const Text('Fechar'),
                   ),
                 ],
               ),

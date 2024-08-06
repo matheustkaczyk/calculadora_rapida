@@ -79,6 +79,7 @@ class _MyAppState extends State<MyApp> {
               floatingActionButton: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const SizedBox(width: 10),
                   FloatingActionButton(
                     onPressed: () {
                       setState(() {
@@ -102,13 +103,16 @@ class _MyAppState extends State<MyApp> {
                     child: const Icon(Icons.add),
                   ),
                   const SizedBox(width: 10),
-                  FloatingActionButton(
-                    onPressed: () {
-                      CheckoutModal.showModal(context, ref);
-                    },
-                    tooltip: 'Checkout',
-                    backgroundColor: Colors.green,
-                    child: const Icon(Icons.shopping_cart),
+                  SizedBox(
+                    width: 150,
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        CheckoutModal.showModal(context, ref);
+                      },
+                      tooltip: 'Checkout',
+                      backgroundColor: Colors.green,
+                      child: const Icon(Icons.shopping_cart, size: 40),
+                    ),
                   ),
                 ],
               ),

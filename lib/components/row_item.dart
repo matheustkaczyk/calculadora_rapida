@@ -31,7 +31,6 @@ class RowItem extends StatelessWidget {
             direction: DismissDirection.endToStart,
             onDismissed: (direction) async {
               await ref.read(itemProvider.notifier).deleteItem(item.id!);
-              // Optionally, you can show a snackbar or update the state here
             },
             background: Container(
               color: Colors.red,
@@ -56,7 +55,7 @@ class RowItem extends StatelessWidget {
                     const SizedBox(width: 10),
                     Text(
                       'R\$${item.price.toStringAsFixed(2)}',
-                      style: const TextStyle(fontSize: 20, color: Colors.green),
+                      style: const TextStyle(fontSize: 20, color: Colors.green, fontWeight: FontWeight.w500),
                     ),
                     Row(
                       children: <Widget>[
@@ -64,7 +63,7 @@ class RowItem extends StatelessWidget {
                           icon: const Icon(Icons.add, color: Colors.blue),
                           onPressed: onAdd,
                         ),
-                        Text('$quantity', style: const TextStyle(fontSize: 16)),
+                        Text('$quantity', style: const TextStyle(fontSize: 20)),
                         IconButton(
                           icon: const Icon(Icons.remove, color: Colors.red),
                           onPressed: onRemove,
